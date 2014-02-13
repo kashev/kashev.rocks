@@ -3,5 +3,6 @@
 .sass-cache/*
 dist/*
 node_modules/*
+src/css/bourbon/*
 
 **/Thumbs.db

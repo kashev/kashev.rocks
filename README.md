@@ -4,7 +4,9 @@
 This repository contains the content of the web site http://kashevdalmia.com.
 
 ## Instructions
-Building this repo requires `node`, `npm`, and `sass`.
+Building this repo requires `node`, `npm`, and `ruby`.
+
+To install JS dependencies, run `node install`. To compile Sass files, `gem install sass bourbon`, then run `bourbon install` in `src/css`.
 
 ## Thanks
 This project is possible thanks to the work on the following projects:
