@@ -1,0 +1,7 @@
+# .gitignore
+
+.sass-cache/*
+dist/*
+node_modules/*
+
+**/Thumbs.db
