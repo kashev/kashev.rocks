@@ -7,9 +7,71 @@
   main.scss
 */
 
-/* IMPORT BOURBON SASS LIBRARY */
+/*
+ * IMPORTS
+ */
+/* BOURBON SASS LIBRARY */
 @import "bourbon/bourbon";
 
 /* RESET */
-@import "reset.css"
+@import "reset.css";
+
+/* LATO FONT */
+@import url("http://fonts.googleapis.com/css?family=Lato");
+
+/*
+ * MIXINS
+ */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/*
+ * VARIABLES
+ */
+
+$font-stack: "Lato", Helvetica, sans-serif;
+
+$background : #FFF;
+$text       : #111;
+
+
+/*
+ * STYLED TAGS
+ */
+
+html body {
+    background-color : $background;
+    color : $text;
+    font-family: $font-stack;
+    
+    font-size: 62.5%; // makes default font size 10px, for easy math
+}
+
+
+/*
+ * UTILITY CLASSES
+ */
+
+.circle {
+    @include border-radius(50%);
+}
+.contained {
+    max-width  : 100%;
+    max-height : 100%;
+}
+
+
+/*
+ * ONE OFF CLASSES
+ */
+
+.headshot-container {
+    width: 10%;
+}
 
