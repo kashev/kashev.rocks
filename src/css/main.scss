@@ -49,6 +49,11 @@ $text       : #111;
 
 $page-margin : 2%;
 
+$h1-size : 3.2rem;
+$h2-size : 1.8rem;
+$padding-factor : 0.05;
+$margin-factor  : 0.05;
+
 
 /*
  * NEAT GRID CSS
@@ -67,13 +72,14 @@ $page-margin : 2%;
  * STYLED TAGS
  */
 
+html {
+    font-size: 62.5%; // makes default font size 10px, for easy math
+}
+
 html body {
     background-color : $background;
-    
     color : $text;
     font-family: $lato-stack;
-    font-size: 62.5%; // makes default font size 10px, for easy math
-
     margin : $page-margin;
 }
 
@@ -82,13 +88,17 @@ header {
 }
 
 h1 {
-    font-size: 3.2rem;
+    font-size: $h1-size;
     font-weight: bold;
+    padding : $padding-factor * $h1-size;
+    margin  : $margin-factor * $h1-size;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: $h2-size;
     font-family: $console-stack;
+    padding : $padding-factor * $h2-size;
+    margin  : $margin-factor * $h2-size;
 }
 
 
@@ -104,9 +114,7 @@ h2 {
     max-height : 100%;
 }
 .center {
-    display      : block;
-    margin-left  : auto;
-    margin-right : auto;
+    margin: 0 auto;
 }
 
 
@@ -115,6 +123,28 @@ h2 {
  */
 
 .headshot-container {
-    width: 10%;
+    width: 12.8rem;
 }
 
+.icon{
+    padding : 0;
+    margin  : 0;
+    width   : 12.8rem;
+    height  : 12.8rem;
+    margin: 0 auto;
+}
+
+.gmail {
+    max-width  : 100%;
+    max-height : 100%;
+    background-color: #DD4B39;
+}
+.github {
+    max-width  : 100%;
+    max-height : 100%;
+}
+.linkedin {
+    max-width  : 100%;
+    max-height : 100%;
+    background-color: #007FB1;
+}
