@@ -49,10 +49,13 @@ $text       : #111;
 
 $page-margin : 2%;
 
-$h1-size : 3.2rem;
-$h2-size : 1.8rem;
+$h1-size : 3.5rem;
+$h2-size : 2.3rem;
+$p-size  : 1.6rem;
 $padding-factor : 0.1;
 $margin-factor  : 0.1;
+
+$page-width : 40.0rem;
 
 
 /*
@@ -91,16 +94,42 @@ h1 {
   font-size: $h1-size;
   font-weight: bold;
   padding : $padding-factor * $h1-size;
-  margin  : $margin-factor * $h1-size;
+  margin  : $margin-factor  * $h1-size;
 }
 
 h2 {
   font-size: $h2-size;
   font-family: $console-stack;
   padding : $padding-factor * $h2-size;
-  margin  : $margin-factor * $h2-size;
+  margin  : $margin-factor  * $h2-size;
 }
 
+p {
+  font-size: $p-size;
+  text-align: justify;
+  line-height: $p-size * (($padding-factor * 3) + 1);
+
+  padding : $padding-factor * $p-size;
+  margin  : $margin-factor  * $p-size;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.content {
+  max-width: $page-width;
+  margin: 0 auto;
+}
+
+/*
+ * SELECTION
+ *  Because why not?
+ */
+$selection-color      : $background;
+$selection-background : $text;
+::selection      { color : $selection-color; background : $selection-background;}
+::-moz-selection { color : $selection-color; background : $selection-background;}
 
 /*
  * UTILITY CLASSES
@@ -117,8 +146,10 @@ h2 {
   margin: 0 auto;
 }
 
+
+
 /*
- * ICON
+ * ICONS
  */
 /* COLOR */
 $gmail-color    : #DD4B39;
@@ -159,6 +190,7 @@ $icon-size : 48px;
   vertical-align: middle;  /* vertical alignment of the inline element */
   height: 100%;
 }
+
 
 
 /*
