@@ -139,7 +139,6 @@ $selection-background : $text;
 ::-moz-selection { color : $selection-color; background : $selection-background;}
 
 
-
 /*
  * UTILITY CLASSES
  */
@@ -162,9 +161,11 @@ $selection-background : $text;
 /* COLOR */
 $gmail-color    : #DD4B39;
 $linkedin-color : #007FB1;
-$github-color   : #060606;
+$github-color   : #555555;
+
 /* SIZE */
 $icon-size : 48px;
+
 /* CLASSES */
 #kd-icons-bar {
   width: 30.0rem;
@@ -186,10 +187,15 @@ $icon-size : 48px;
       height: 90%;
     }
   }
+
   /* Specific Icon Classes */
   .gmail-icon    { background-color : $gmail-color; }
   .linkedin-icon { background-color : $linkedin-color; }
   .github-icon   { background-color : $github-color; }
+  /* Hover Icon Classes */
+  .gmail-icon:hover    { background-color : lighten($gmail-color, 15%); }
+  .linkedin-icon:hover { background-color : lighten($linkedin-color, 15%); }
+  .github-icon:hover   { background-color : lighten($github-color, 15%); }
 }
 
 .kd-icon-box:before {    /* create a full-height inline block pseudo=element */
