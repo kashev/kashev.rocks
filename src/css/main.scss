@@ -19,7 +19,7 @@
 
 /* FONTS */
 /* LATO FONT */
-@import url("http://fonts.googleapis.com/css?family=Lato");
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400");
 /* INCONSOLATA */
 @import url("http://fonts.googleapis.com/css?family=Inconsolata");
 
@@ -41,8 +41,8 @@
  * VARIABLES
  */
 
-$lato-stack    : "Lato", Helvetica, sans-serif;
-$console-stack : "Inconsolata", monospace;
+$lato-stack         : "Lato", Helvetica, sans-serif;
+$console-stack      : "Inconsolata", monospace;
 
 $background : #FFF;
 $text       : #111;
@@ -55,7 +55,7 @@ $p-size  : 1.6rem;
 $padding-factor : 0.1;
 $margin-factor  : 0.1;
 
-$page-width : 40.0rem;
+$page-width : 45.0rem;
 
 
 /*
@@ -83,7 +83,13 @@ html body {
   background-color : $background;
   color : $text;
   font-family: $lato-stack;
-  margin : $page-margin;
+  margin : $page-margin $page-margin 0 $page-margin;
+  height: 100%;
+}
+
+.content {
+  max-width: $page-width;
+  margin: 0 auto;
 }
 
 header {
@@ -96,11 +102,11 @@ h1 {
 }
 
 header h1 {
-  font-size: $h1-size * 1.6;
+  font-size: $h1-size * 2;
   padding : $padding-factor * $h1-size;
   margin  : $margin-factor  * $h1-size;
+  font-weight : 300;
 }
-
 
 h2 {
   font-size: $h2-size;
@@ -110,6 +116,7 @@ h2 {
 }
 
 p {
+  font-family: $lato-stack;
   font-size: $p-size;
   text-align: justify;
   line-height: $p-size * (($padding-factor * 3) + 1);
@@ -121,13 +128,6 @@ p {
 strong {
   font-weight: bold;
 }
-
-.content {
-  max-width: $page-width;
-  margin: 0 auto;
-}
-
-
 
 /*
  * SELECTION
@@ -154,7 +154,6 @@ $selection-background : $text;
 }
 
 
-
 /*
  * ICONS
  */
@@ -164,7 +163,7 @@ $icon-size : 48px;
 
 /* CLASSES */
 #kd-icons-bar {
-  width: 30.0rem;
+  width: 35.0rem;
   padding : $padding-factor * 20.0rem;
   .kd-icon-box {
     @include border-radius(50%);
@@ -194,13 +193,19 @@ $icon-size : 48px;
   $github-name    : ".github-icon";
   $github-color   : #555555;
 
+  $ghost-name     : ".ghost-icon";
+  $ghost-color    : #242628;
+
+
   @mixin kd-icon-maker($name, $color) {
     #{$name}       {background-color : $color; }
     #{$name}:hover {background-color : lighten($color, 15%); }
   }
+
   @include kd-icon-maker(   $gmail-name,    $gmail-color);
   @include kd-icon-maker($linkedin-name, $linkedin-color);
   @include kd-icon-maker(  $github-name,   $github-color);
+  @include kd-icon-maker(   $ghost-name,    $ghost-color);
 
 }
 
