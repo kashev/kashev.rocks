@@ -184,8 +184,8 @@ $icon-size : 48px;
   }
 
   /* Specific Icon Classes */
-  $gmail-name     : ".gmail-icon";
-  $gmail-color    : #DD4B39;
+  $mail-name     : ".mail-icon";
+  $mail-color    : #DD4B39; // gmail
   
   $linkedin-name  : ".linkedin-icon";
   $linkedin-color : #007FB1;
@@ -202,7 +202,7 @@ $icon-size : 48px;
     #{$name}:hover {background-color : lighten($color, 15%); }
   }
 
-  @include kd-icon-maker(   $gmail-name,    $gmail-color);
+  @include kd-icon-maker(    $mail-name,     $mail-color);
   @include kd-icon-maker($linkedin-name, $linkedin-color);
   @include kd-icon-maker(  $github-name,   $github-color);
   @include kd-icon-maker(   $ghost-name,    $ghost-color);
