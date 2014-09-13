@@ -1,10 +1,6 @@
 /*
-  Kashev Dalmia
-  kashev.dalmia@gmail.com
-
-  kashevdalmia.com
-
-  main.js
-*/
+ * Kashev Dalmia - kashev.dalmia@gmail.com
+ * kashevdalmia.com
+ */
 
 /* INTENTIONALLY EMPTY */

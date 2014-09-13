@@ -1,12 +1,18 @@
 # kashevdalmia.com
-# README.md
+
+    Kashev Dalmia - kashev.dalmia@gmail.com
+    kashevdalmia.com
 
 This repository contains the content of the web site http://kashevdalmia.com.
 
 ## Instructions
 Building this repo requires `node`, `npm`, and `ruby`.
 
-To install JS dependencies, run `node install`. To compile Sass files, `gem install sass bourbon neat`, then run `bourbon install` & `neat install` in `src/css`.
+To install JS dependencies, run `node install`, `npm install -g grunt-cli`.
+
+To develop, run `grunt server`.
+
+To compile Sass files, `gem install sass bourbon`, then run `bourbon install` in `src/css`.
 
 ## Thanks
 This project is possible thanks to the work on the following projects:

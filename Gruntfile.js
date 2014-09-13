@@ -1,11 +1,7 @@
 /*
-  Kashev Dalmia
-  kashev.dalmia@gmail.com
-
-  kashevdalmia.com
-
-  Gruntfile.js
-*/
+ * Kashev Dalmia - kashev.dalmia@gmail.com
+ * kashevdalmia.com
+ */
 
 /*
  * GRUNT CONFIGURATION
@@ -15,13 +11,12 @@ module.exports = function(grunt) {
     'dist/index.html' : 'src/index.html'
   };
   var css_files  = {
-    'dist/css/main.css' : 'src/css/main.scss',
-    'dist/css/reset.css' : 'src/css/reset.css'
+    'dist/css/main.css' : 'src/css/main.scss'
   };
   var js_files   = {
     'dist/js/main.js' : 'src/js/main.js'
   };
-  
+
   var img_copy =  {
     flatten : true,
     expand : true,
@@ -46,7 +41,7 @@ module.exports = function(grunt) {
           base : 'dist',
           livereload : true,
           /* Choose Only 1 Hostname */
-          hostname : 'localhost' // local only 
+          hostname : 'localhost' // local only
           // hostname : '0.0.0.0' // viewable via LAN
         },
       }
@@ -125,6 +120,12 @@ module.exports = function(grunt) {
     },
 
     /*
+     * CLEAN
+     *   to clean stuff up.
+     */
+    clean: [".sass-cache", "dist"],
+
+    /*
      * HTMLMIN
      *   for production minifying of HTML
      */
@@ -151,7 +152,7 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     /*
      * WATCH
      *   for live reload server
@@ -197,17 +198,20 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   // Load JS Minification Task
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  /* CLEAN TASKS */
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   /*
    * REGISTER GRUNT TASKS
    */
-  // Default task is dev. dist builds deploy folder.
+  // Default task builds a development distribution.
   grunt.registerTask('default', [
     'jshint',
     'sass:dev',
     'copy:dev'
   ]);
-  
+
+  // Dist builds a minified, production ready distribution.
   grunt.registerTask('dist', [
     'jshint',
     'sass:dist',
@@ -216,6 +220,7 @@ module.exports = function(grunt) {
     'copy:dist'
   ]);
 
+  // Runs a live reloading server specified by connect.
   grunt.registerTask('server', [
     'jshint',
     'sass:dev',

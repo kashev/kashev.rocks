@@ -1,21 +1,7 @@
 /*
-  Kashev Dalmia
-  kashev.dalmia@gmail.com
-
-  kashevdalmia.com
-
-  main.scss
-*/
-
-/*
- * IMPORTS
+ * Kashev Dalmia - kashev.dalmia@gmail.com
+ * kashevdalmia.com
  */
-/* BOURBON NEAT */
-@import "bourbon/bourbon";
-@import "neat/neat";
-
-/* RESET */
-@import "reset.css";
 
 /* FONTS */
 /* LATO FONT */
@@ -41,8 +27,8 @@
  * VARIABLES
  */
 
-$lato-stack         : "Lato", Helvetica, sans-serif;
-$console-stack      : "Inconsolata", monospace;
+$lato-stack    : "Lato", Helvetica, sans-serif;
+$console-stack : "Inconsolata", monospace;
 
 $background : #FFF;
 $text       : #111;
@@ -52,24 +38,10 @@ $page-margin : 2%;
 $h1-size : 2.7rem;
 $h2-size : 2.3rem;
 $p-size  : 1.6rem;
-$padding-factor : 0.1;
-$margin-factor  : 0.1;
+$padding-factor : 0.0;
+$margin-factor  : 0.0;
 
 $page-width : 45.0rem;
-
-
-/*
- * NEAT GRID CSS
- */
-// default grid is 12
-.grid {
-  @include outer-container;
-  .half       { @include span-columns(6); }
-  .third      { @include span-columns(4); }
-  .two-thirds { @include span-columns(8); }
-  .fourth     { @include span-columns(3); }
-}
-
 
 /*
  * STYLED TAGS
@@ -83,6 +55,9 @@ html body {
   background-color : $background;
   color : $text;
   font-family: $lato-stack;
+  .pure-g [class *= "pure-u"] {
+    font-family: $lato-stack;
+  }
   margin : $page-margin $page-margin 0 $page-margin;
   height: 100%;
 }
@@ -94,6 +69,7 @@ html body {
 
 header {
   text-align: center;
+
 }
 
 h1 {
@@ -131,7 +107,7 @@ strong {
 
 /*
  * SELECTION
- *  Because why not?
+ *  Because this is how you show you care.
  */
 $selection-color      : $background;
 $selection-background : $text;
@@ -163,16 +139,15 @@ $icon-size : 48px;
 
 /* CLASSES */
 #kd-icons-bar {
-  width: 35.0rem;
-  padding : $padding-factor * 20.0rem;
+  width: 100%;
+  padding : 0;
   .kd-icon-box {
     @include border-radius(50%);
-    display: inline-block;
+    display: block;
     width  : $icon-size;
     height : $icon-size;
     text-align: center;
-    font: 0/0 a;
-  
+
     .kd-icon {
       display: block;
       margin-left: auto;
@@ -184,38 +159,63 @@ $icon-size : 48px;
   }
 
   /* Specific Icon Classes */
-  $mail-name     : ".mail-icon";
-  $mail-color    : #DD4B39; // gmail
-  
+  $mail-name      : ".mail-icon";
+  $mail-color     : #DD4B39; // gmail
+  $mail-image     : "mail.png";
   $linkedin-name  : ".linkedin-icon";
   $linkedin-color : #007FB1;
-  
+  $linkedin-image : "linkedin.png";
   $github-name    : ".github-icon";
   $github-color   : #555555;
+  $github-image   : "github.png";
+  $blog-name      : ".blog-icon";
+  $blog-color     : #242628; // ghost blog
+  $blog-image     : "ghost.png";
 
-  $ghost-name     : ".ghost-icon";
-  $ghost-color    : #242628;
 
+  @mixin kd-icon-maker($name, $color, $image) {
+    #{$name} {
+      display: block;
+      margin: 0 auto;
+      width: $icon-size;
+      height: $icon-size;
+      @include border-radius(50%);
 
-  @mixin kd-icon-maker($name, $color) {
-    #{$name}       {background-color : $color; }
-    #{$name}:hover {background-color : lighten($color, 15%); }
+      background: $color;
+      background-image: url(../img/#{$image});
+      background-size: $icon-size*.9 $icon-size*.9;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+
+    #{$name}:hover {
+      background: lighten($color, 15%);
+      background-image: url(../img/#{$image});
+      background-size: $icon-size*.9 $icon-size*.9;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
   }
 
-  @include kd-icon-maker(    $mail-name,     $mail-color);
-  @include kd-icon-maker($linkedin-name, $linkedin-color);
-  @include kd-icon-maker(  $github-name,   $github-color);
-  @include kd-icon-maker(   $ghost-name,    $ghost-color);
-
+  @include kd-icon-maker(    $mail-name,     $mail-color, $mail-image);
+  @include kd-icon-maker($linkedin-name, $linkedin-color, $linkedin-image);
+  @include kd-icon-maker(  $github-name,   $github-color, $github-image);
+  @include kd-icon-maker(    $blog-name,     $blog-color, $blog-image);
 }
 
-.kd-icon-box:before {    /* create a full-height inline block pseudo=element */
-  content: " ";
-  display: inline-block;
-  vertical-align: middle;  /* vertical alignment of the inline element */
-  height: 100%;
-}
 
+
+.circletag {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #E6E7ED;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    background-image: url(no.png);
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+}
 
 
 /*
