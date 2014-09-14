@@ -25,6 +25,10 @@ module.exports = function(grunt) {
     dest: 'dist/img/'
   };
 
+  var resume_copy = {
+    'dist/Kashev_Dalmia_Resume_v2014_08_0.pdf' : 'src/Kashev_Dalmia_Resume_v2014_08_0.pdf'
+  };
+
   /*
    * GRUNT INITIALIZATION CONFIGURATION
    */
@@ -41,8 +45,8 @@ module.exports = function(grunt) {
           base : 'dist',
           livereload : true,
           /* Choose Only 1 Hostname */
-          hostname : 'localhost' // local only
-          // hostname : '0.0.0.0' // viewable via LAN
+          // hostname : 'localhost' // local only
+          hostname : '0.0.0.0' // viewable via LAN
         },
       }
     },
@@ -109,12 +113,14 @@ module.exports = function(grunt) {
         files: [
           html_files,
           js_files,
-          img_copy
+          img_copy,
+          resume_copy
         ]
       },
       dist : {
         files: [
-          img_copy
+          img_copy,
+          resume_copy
         ]
       }
     },

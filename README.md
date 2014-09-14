@@ -21,6 +21,6 @@ This project is possible thanks to the work on the following projects:
 - [Grunt](http://gruntjs.com/)
 - [jQuery](http://jquery.com/)
 - [Sass](http://sass-lang.com/)
-- [Bourbon](http://bourbon.io/)
-- [Neat](http://neat.bourbon.io/)
+- [Pure Css](http://purecss.io/)
 - [Simple Icons](http://simpleicons.org/)
+- Thanks to [Rob Jepson](http://robjepson.wordpress.com/) for this [nifty resume icon](http://robjepson.wordpress.com/2013/04/16/resume-icon/) which I swiped.

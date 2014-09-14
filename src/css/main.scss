@@ -140,12 +140,9 @@ $selection-background : $text;
 /*
  * ICONS
  */
-
-/* SIZE */
-$icon-size : 48px;
-
-/* CLASSES */
 #kd-icons-bar {
+  $icon-size : 48px;
+
   width: 100%;
   padding : 0;
   .kd-icon-box {
@@ -166,18 +163,25 @@ $icon-size : 48px;
   }
 
   /* Specific Icon Classes */
-  $mail-name      : ".mail-icon";
-  $mail-color     : #DD4B39; // gmail
-  $mail-image     : "mail.png";
-  $linkedin-name  : ".linkedin-icon";
+  $mail-name : ".mail-icon";
+  $mail-color : #DD4B39; // gmail
+  $mail-image : "mail.png";
+
+  $github-name : ".github-icon";
+  $github-color : #555555;
+  $github-image : "github.png";
+
+  $linkedin-name : ".linkedin-icon";
   $linkedin-color : #007FB1;
   $linkedin-image : "linkedin.png";
-  $github-name    : ".github-icon";
-  $github-color   : #555555;
-  $github-image   : "github.png";
-  $blog-name      : ".blog-icon";
-  $blog-color     : #242628; // ghost blog
-  $blog-image     : "ghost.png";
+
+  $resume-name : ".resume-icon";
+  $resume-color : #333333;
+  $resume-image : "resume.png";
+
+  $blog-name : ".blog-icon";
+  $blog-color : #212425; // ghost blog
+  $blog-image : "ghost.png";
 
 
   @mixin kd-icon-maker($name, $color, $image) {
@@ -204,10 +208,11 @@ $icon-size : 48px;
     }
   }
 
-  @include kd-icon-maker(    $mail-name,     $mail-color, $mail-image);
+  @include kd-icon-maker($mail-name, $mail-color, $mail-image);
+  @include kd-icon-maker($github-name, $github-color, $github-image);
   @include kd-icon-maker($linkedin-name, $linkedin-color, $linkedin-image);
-  @include kd-icon-maker(  $github-name,   $github-color, $github-image);
-  @include kd-icon-maker(    $blog-name,     $blog-color, $blog-image);
+  @include kd-icon-maker($resume-name, $resume-color, $resume-image);
+  @include kd-icon-maker($blog-name, $blog-color, $blog-image);
 }
 
 
