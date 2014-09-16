@@ -33,15 +33,15 @@ $console-stack : "Inconsolata", monospace;
 $background : #FFF;
 $text       : #111;
 
-$page-margin : 2%;
+$page-margin : 3%;
 
-$h1-size : 2.7rem;
-$h2-size : 2.3rem;
-$p-size  : 1.6rem;
+$h1-size : 3.5rem;
+$h2-size : 3.0rem;
+$p-size : 2.1rem;
 $padding-factor : 0.0;
 $margin-factor  : 0.0;
 
-$page-width : 45.0rem;
+$page-width : 60.0rem;
 
 /*
  * STYLED TAGS
@@ -65,13 +65,6 @@ html body {
 #content {
   width: 100%;
   max-width: 100%;
-}
-
-@media (min-width: 568px) {
-  #content {
-    max-width: $page-width;
-    margin: 0 auto;
-  }
 }
 
 header {
@@ -112,6 +105,13 @@ strong {
   font-weight: bold;
 }
 
+@media (min-width: 568px) {
+  #content {
+    max-width: $page-width;
+    margin: 0 auto;
+  }
+}
+
 /*
  * SELECTION
  *  Because this is how you show you care.
@@ -141,7 +141,7 @@ $selection-background : $text;
  * ICONS
  */
 #kd-icons-bar {
-  $icon-size : 48px;
+  $icon-size : 64px;
 
   width: 100%;
   padding : 0;
@@ -215,27 +215,12 @@ $selection-background : $text;
   @include kd-icon-maker($blog-name, $blog-color, $blog-image);
 }
 
-
-
-.circletag {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: #E6E7ED;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    background-image: url(no.png);
-    background-position:50% 50%;
-    background-repeat:no-repeat;
-}
-
-
 /*
  * ONE OFF CLASSES
  */
 
 .headshot-container {
-  width: 12.8rem;
+  width: 16.5rem;
   border: 1.28rem;
   display: block;
   margin-top : 20px;
