@@ -79,8 +79,9 @@ h1 {
 
 header {
   padding-bottom: $p-size;
+  white-space: nowrap;
   h1 {
-    font-size: $h1-size * 2;
+    font-size: 14vw;
     padding : $padding-factor * $h1-size;
     margin  : $margin-factor  * $h1-size;
     font-weight : 300;
@@ -108,10 +109,17 @@ strong {
   font-weight: bold;
 }
 
+/*
+ * Large Screen Tweaks
+ */
 @media (min-width: 568px) {
   #content {
     max-width: $page-width;
     margin: 0 auto;
+  }
+
+  header h1 {
+    font-size: $h1-size * 2;
   }
 }
 
