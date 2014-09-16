@@ -19,8 +19,8 @@ This project is possible thanks to the work on the following projects:
 
 - [Node](http://nodejs.org/)
 - [Grunt](http://gruntjs.com/)
-- [jQuery](http://jquery.com/)
 - [Sass](http://sass-lang.com/)
-- [Pure Css](http://purecss.io/)
+- [Pure CSS](http://purecss.io/)
+- [hint.css](http://kushagragour.in/lab/hint/)
 - [Simple Icons](http://simpleicons.org/)
 - Thanks to [Rob Jepson](http://robjepson.wordpress.com/) for this [nifty resume icon](http://robjepson.wordpress.com/2013/04/16/resume-icon/) which I swiped.

@@ -77,11 +77,14 @@ h1 {
   font-weight: bold;
 }
 
-header h1 {
-  font-size: $h1-size * 2;
-  padding : $padding-factor * $h1-size;
-  margin  : $margin-factor  * $h1-size;
-  font-weight : 300;
+header {
+  padding-bottom: $p-size;
+  h1 {
+    font-size: $h1-size * 2;
+    padding : $padding-factor * $h1-size;
+    margin  : $margin-factor  * $h1-size;
+    font-weight : 300;
+  }
 }
 
 h2 {
@@ -140,8 +143,8 @@ $selection-background : $text;
 /*
  * ICONS
  */
+$icon-size : 64px;
 #kd-icons-bar {
-  $icon-size : 64px;
 
   width: 100%;
   padding : 0;
@@ -216,6 +219,19 @@ $selection-background : $text;
 }
 
 /*
+ * HINT.CSS CUSTOMIZATIONS
+ */
+.hint:after, [data-hint]:after {
+  font-size: $p-size * 0.9;
+}
+.hint--bottom:after {
+  margin-left: -1 * 0.5 * $icon-size;
+}
+.hint--bottom:before {
+  margin-left: -5px;
+}
+
+/*
  * ONE OFF CLASSES
  */
 
@@ -226,3 +242,4 @@ $selection-background : $text;
   margin-top : 20px;
   padding-bottom: 2rem;
 }
+
