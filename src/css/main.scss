@@ -86,6 +86,10 @@ header {
     margin  : $margin-factor  * $h1-size;
     font-weight : 300;
   }
+
+  h2 {
+    font-size: 8vw;
+  }
 }
 
 h2 {
@@ -118,8 +122,13 @@ strong {
     margin: 0 auto;
   }
 
-  header h1 {
-    font-size: $h1-size * 2;
+  header {
+    h1 {
+      font-size: $h1-size * 2;
+    }
+    h2 {
+      font-size: $h2-size;
+    }
   }
 }
 
