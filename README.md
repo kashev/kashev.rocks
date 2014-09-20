@@ -8,7 +8,7 @@ This repository contains the content of the web site http://kashevdalmia.com.
 ## Instructions
 Building this repo requires `node`, `npm`, and `ruby`.
 
-To install JS dependencies, run `node install`, `npm install -g grunt-cli`.
+To install JS dependencies, run `npm install`, `npm install -g grunt-cli`.
 
 To develop, run `grunt server`.
 
