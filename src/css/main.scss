@@ -88,7 +88,7 @@ header {
   }
 
   h2 {
-    font-size: 8vw;
+    font-size: 6vw;
   }
 }
 
@@ -160,7 +160,7 @@ $selection-background : $text;
 /*
  * ICONS
  */
-$icon-size : 64px;
+$icon-size : 54px;
 #kd-icons-bar {
 
   width: 100%;
@@ -183,6 +183,10 @@ $icon-size : 64px;
   }
 
   /* Specific Icon Classes */
+  $home-name : ".home-icon";
+  $home-color : #30A848; // bite labs
+  $home-image : "home.png";
+
   $mail-name : ".mail-icon";
   $mail-color : #DD4B39; // gmail
   $mail-image : "mail.png";
@@ -191,18 +195,17 @@ $icon-size : 64px;
   $github-color : #555555;
   $github-image : "github.png";
 
-  $linkedin-name : ".linkedin-icon";
-  $linkedin-color : #007FB1;
-  $linkedin-image : "linkedin.png";
+  $ghost-name : ".ghost-icon";
+  $ghost-color : #212425; // ghost blog
+  $ghost-image : "ghost.png";
 
-  $resume-name : ".resume-icon";
-  $resume-color : #333333;
-  $resume-image : "resume.png";
+  $lastfm-name : ".lastfm-icon";
+  $lastfm-color : #D51007;
+  $lastfm-image : "lastfm.png";
 
-  $blog-name : ".blog-icon";
-  $blog-color : #212425; // ghost blog
-  $blog-image : "ghost.png";
-
+  $tumblr-name : ".tumblr-icon";
+  $tumblr-color : #2C4762;
+  $tumblr-image : "tumblr.png";
 
   @mixin kd-icon-maker($name, $color, $image) {
     #{$name} {
@@ -228,11 +231,12 @@ $icon-size : 64px;
     }
   }
 
+  @include kd-icon-maker($home-name, $home-color, $home-image);
   @include kd-icon-maker($mail-name, $mail-color, $mail-image);
   @include kd-icon-maker($github-name, $github-color, $github-image);
-  @include kd-icon-maker($linkedin-name, $linkedin-color, $linkedin-image);
-  @include kd-icon-maker($resume-name, $resume-color, $resume-image);
-  @include kd-icon-maker($blog-name, $blog-color, $blog-image);
+  @include kd-icon-maker($ghost-name, $ghost-color, $ghost-image);
+  @include kd-icon-maker($lastfm-name, $lastfm-color, $lastfm-image);
+  @include kd-icon-maker($tumblr-name, $tumblr-color, $tumblr-image);
 }
 
 /*

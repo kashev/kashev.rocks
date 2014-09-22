@@ -1,4 +1,4 @@
-# kashevdalmia.com
+# kashev.rocks
 
     Kashev Dalmia - kashev.dalmia@gmail.com
     kashev.rocks
@@ -23,4 +23,5 @@ This project is possible thanks to the work on the following projects:
 - [Pure CSS](http://purecss.io/)
 - [hint.css](http://kushagragour.in/lab/hint/)
 - [Simple Icons](http://simpleicons.org/)
+- [iconmonstr](http://iconmonstr.com/)
 - Thanks to [Rob Jepson](http://robjepson.wordpress.com/) for this [nifty resume icon](http://robjepson.wordpress.com/2013/04/16/resume-icon/) which I swiped.
