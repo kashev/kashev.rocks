@@ -1,6 +1,6 @@
 /*
  * Kashev Dalmia - kashev.dalmia@gmail.com
- * kashevdalmia.com
+ * kashev.rocks
  */
 
 /*
@@ -23,10 +23,6 @@ module.exports = function(grunt) {
     cwd: 'src/img',
     src: ['**/*'],
     dest: 'dist/img/'
-  };
-
-  var resume_copy = {
-    'dist/Kashev_Dalmia_Resume_v2014_08_0.pdf' : 'src/Kashev_Dalmia_Resume_v2014_08_0.pdf'
   };
 
   /*
@@ -114,13 +110,11 @@ module.exports = function(grunt) {
           html_files,
           js_files,
           img_copy,
-          resume_copy
         ]
       },
       dist : {
         files: [
           img_copy,
-          resume_copy
         ]
       }
     },

@@ -1,9 +1,9 @@
 # kashevdalmia.com
 
     Kashev Dalmia - kashev.dalmia@gmail.com
-    kashevdalmia.com
+    kashev.rocks
 
-This repository contains the content of the web site http://kashevdalmia.com.
+This repository contains the content of the web site http://kashev.rocks.
 
 ## Instructions
 Building this repo requires `node`, `npm`, and `ruby`.
@@ -12,7 +12,7 @@ To install JS dependencies, run `npm install`, `npm install -g grunt-cli`.
 
 To develop, run `grunt server`.
 
-To compile Sass files, `gem install sass bourbon`, then run `bourbon install` in `src/css`.
+To compile Sass files, `gem install sass`.
 
 ## Thanks
 This project is possible thanks to the work on the following projects:

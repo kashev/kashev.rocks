@@ -1,6 +1,6 @@
 /*
  * Kashev Dalmia - kashev.dalmia@gmail.com
- * kashevdalmia.com
+ * kashev.rocks
  */
 
 /* INTENTIONALLY EMPTY */
