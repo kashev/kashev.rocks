@@ -10,9 +10,9 @@ Building this repo requires `node`, `npm`, and `ruby`.
 
 To install JS dependencies, run `npm install`, `npm install -g grunt-cli`.
 
-To develop, run `grunt server`.
-
 To compile Sass files, `gem install sass`.
+
+To develop, run `grunt server`.
 
 ## Thanks
 This project is possible thanks to the work on the following projects:
