@@ -5,7 +5,7 @@
 
 from flask.ext.script import Manager
 
-from src.app import app
+from src.kashevrocks import app
 
 manager = Manager(app)
 
