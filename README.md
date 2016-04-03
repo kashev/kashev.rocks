@@ -6,19 +6,22 @@
 This repository contains the content of the web site http://kashev.rocks.
 
 ## Instructions
-Building this repo requires `node`, `npm`, and `ruby`.
+This repository uses Python 3, and Ruby. Make sure that both are installed.
 
-To install JS dependencies, run `npm install`, `npm install -g grunt-cli`.
+Make a Python3 virtual enviornment and then run `pip install -r requirements.txt`.
 
 To compile Sass files, `gem install sass`.
 
-To develop, run `grunt server`.
+To develop, run `./manage.py liveserver`.
 
 ## Thanks
 This project is possible thanks to the work on the following projects:
 
-- [Node](http://nodejs.org/)
-- [Grunt](http://gruntjs.com/)
+- [Flask](http://flask.pocoo.org/)
+- A bunch of cool Flask extensions:
+    - [Flask-Script](https://flask-script.readthedocs.org/en/latest/)
+    - [Flask-Assets](https://flask-assets.readthedocs.org/en/latest/)
+- [livereload](http://livereload.readthedocs.org/en/latest/)
 - [Sass](http://sass-lang.com/)
 - [Pure CSS](http://purecss.io/)
 - [hint.css](http://kushagragour.in/lab/hint/)
