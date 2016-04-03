@@ -3,14 +3,22 @@
 # kashev.rocks
 # Kashev Dalmia - kashev.dalmia@gmail.com
 
-from flask import Flask
+import flask
+from flask.ext.assets import Environment, Bundle
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
+assets = Environment(app)
+
+# Register Assets
+main_css = Bundle('css/main.scss',
+                  filters='scss,cssmin',
+                  output='generated/main.css')
+assets.register('main_css', main_css)
 
 
 @app.route("/")
 def index():
-    return "Hello World"
+    return flask.render_template('index.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
