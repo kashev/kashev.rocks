@@ -3,3 +3,4 @@ Flask==0.10.1
 Flask-Assets==0.11
 Flask-Script==2.0.5
 livereload==2.4.1
+mod-wsgi==4.4.23

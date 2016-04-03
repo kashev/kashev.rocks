@@ -7,6 +7,7 @@ import flask
 from flask.ext.assets import Environment, Bundle
 
 app = flask.Flask(__name__)
+app.debug=True
 assets = Environment(app)
 
 # Register Assets
