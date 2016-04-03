@@ -28,5 +28,19 @@ def liveserver(debug=True):
     server.serve()
 
 
+@manager.command
+def clean():
+    """ Cleans up all generated and cache files from the project. """
+    import shutil
+    paths_to_clean = ['src/static/.webassets-cache',
+                      'src/static/generated']
+    for path in paths_to_clean:
+        try:
+            shutil.rmtree(path)
+
+        except FileNotFoundError:
+            pass  # They're not there, that's fine.
+
+
 if __name__ == "__main__":
     manager.run()
