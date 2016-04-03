@@ -19,11 +19,15 @@ assets.register('main_css', main_css)
 
 @app.route("/")
 def index():
+    """ Return the main page for kashev.rocks. """
     return flask.render_template('index.html')
 
 
 @app.route("/uinstall")
 def uinstall():
+    """ Return the url to my Ubuntu Installer script. For Curling;
+            `curl -L kashev.rocks/uinstall`
+    """
     uinstall_url = 'https://github.com/kashev/dotfiles/raw/master/uinstall.sh'
     return flask.redirect(uinstall_url)
 
