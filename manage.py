@@ -11,12 +11,6 @@ manager = Manager(app)
 
 
 @manager.command
-def hello(name='Kashev'):
-    """ Just say hello. """
-    print("Hello, {}! You're doing a good job.".format(name))
-
-
-@manager.command
 def liveserver(debug=True):
     """ Runs a live reloading server which watches non-python code as well. """
     import livereload
