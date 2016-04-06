@@ -16,9 +16,6 @@ class HomePageLink(namedtuple('HomePageLink', ['name', 'hint',
 
 
 LINKS = [
-    HomePageLink('home', 'My Other Website', '#30A848',
-                 'http://kashevdalmia.com/'),
-
     HomePageLink('email', 'Email Me', '#DD4B39',
                  'mailto:kashev.dalmia@gmail.com?Subject=Hello!'),
 
@@ -28,14 +25,8 @@ LINKS = [
     HomePageLink('github', 'Github', '#555555',
                  'http://github.com/kashev'),
 
-    HomePageLink('lastfm', 'Last.fm', '#D51007',
-                 'http://www.last.fm/user/aerovai'),
-
-    HomePageLink('instagram', 'Instagram', '#125688',
-                 'http://www.instagram.com/kashev'),
-
-    HomePageLink('tumblr', 'Tumblr', '#2C4762',
-                 'http://blog.kashev.rocks'),
+    HomePageLink('linkedin', 'LinkedIn', '#007FB1',
+                 'http://linkedin.com/in/kashevdalmia/'),
 
     HomePageLink('ghost', 'Blog', '#718087',
                  'http://blog.kashevdalmia.com/'),
