@@ -12,7 +12,7 @@ class HomePageLink(namedtuple('HomePageLink', ['name', 'hint',
 
     @property
     def svg(self):
-        return open('src/static/img/icons/{}.svg'.format(self.name)).read()
+        return 'svgs/{}.svg'.format(self.name)
 
 
 LINKS = [

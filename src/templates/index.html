@@ -52,7 +52,7 @@
                       pure-u-md-1-{{links|length}}">
             <a href="{{ l.url }}">
               <div class="kd-icon {{l.name}}-icon hint--bottom" data-hint="{{ l.hint }}">
-                {{ l.svg|safe }}
+                {% include l.svg %}
               </div>
             </a>
           </div>
