@@ -3,6 +3,8 @@
 # kashev.rocks
 # Kashev Dalmia - kashev.dalmia@gmail.com
 
+import logging
+
 import flask
 
 from .assets import register_assets
@@ -10,6 +12,9 @@ from .assets import register_assets
 from .home_page_links import LINKS
 
 app = flask.Flask(__name__)
+
+# Set up logging.
+logging.basicConfig(filename='debug.log', level=logging.DEBUG)
 
 
 # Configure all the URLS

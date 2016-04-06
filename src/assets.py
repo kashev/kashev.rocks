@@ -16,8 +16,8 @@ def register_assets(app):
 
     main_css = Bundle('css/main.jinja.scss',
                       filters=[Jinja2Filter(context={'links': LINKS}),
-                               'scss',
-                               # 'pyscss',  # Choose pyscss or scss, not both.
+                               # 'scss',
+                               'pyscss',  # Choose pyscss or scss, not both.
                                'cssmin'
                                ],
                       output='generated/main.css')
