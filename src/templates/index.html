@@ -61,8 +61,7 @@
     </header> <!-- END OF HEADER -->
 
     <!-- BEGIN CONTENT -->
-    <h1>About Me</h1>
-    <p>My name is <strong>Kashev Dalmia</strong>. This website is a place for me to put all my stuff.<p>
+    {% filter markdown %}{% include 'markdown/index.md' %}{% endfilter %}
   </div> <!-- END OF CONTENT -->
 
   <!-- Script -->

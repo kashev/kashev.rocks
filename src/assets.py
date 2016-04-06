@@ -4,6 +4,7 @@
 # Kashev Dalmia - kashev.dalmia@gmail.com
 
 from flask.ext.assets import Environment, Bundle, Jinja2Filter
+from flask.ext.misaka import Misaka
 
 # Import the links which go on the home page
 from .home_page_links import LINKS
@@ -13,6 +14,8 @@ def register_assets(app):
     """ Given a Flask app, register all the assets for it. """
     assets_env = Environment(app)
     assets_env.debug = app.debug
+
+    Misaka(app)
 
     main_css = Bundle('css/main.jinja.scss',
                       filters=[Jinja2Filter(context={'links': LINKS}),
