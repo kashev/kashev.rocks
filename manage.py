@@ -32,12 +32,17 @@ def liveserver(debug=True):
 def clean():
     """ Cleans up all generated and cache files from the project. """
     import shutil
+    import os
+
     paths_to_clean = ['src/static/.webassets-cache',
                       'src/static/generated',
                       'debug.log']
     for path in paths_to_clean:
         try:
             shutil.rmtree(path)
+
+        except NotADirectoryError:
+            os.remove(path)  # It's a file, not a directory
 
         except FileNotFoundError:
             pass  # They're not there, that's fine.
