@@ -6,11 +6,9 @@
 This repository contains the content of the web site http://kashev.rocks.
 
 ## Instructions
-This repository uses Python 3, and Ruby. Make sure that both are installed.
+This repository uses Python 3.
 
-Make a Python3 virtual enviornment and then run `pip install -r requirements.txt`.
-
-To compile Sass files, `gem install sass`.
+Make a Python 3 virtual enviornment and then run `pip install -r requirements.txt`.
 
 To develop, run `./manage.py liveserver`.
 
@@ -25,6 +23,7 @@ This project is possible thanks to the work on the following projects:
 - [Sass](http://sass-lang.com/)
 - [Pure CSS](http://purecss.io/)
 - [hint.css](http://kushagragour.in/lab/hint/)
-- [Simple Icons](http://simpleicons.org/)
-- [iconmonstr](http://iconmonstr.com/)
-- Thanks to [Rob Jepson](http://robjepson.wordpress.com/) for this [nifty resume icon](http://robjepson.wordpress.com/2013/04/16/resume-icon/) which I swiped.
+- [Simple Icons](http://simpleicons.org/) for Brand Icons
+- [iconmonstr](http://iconmonstr.com/) For Generic
+- [flaticon](http://www.flaticon.com)
+    - Home & Resume icons by [Freepik](http://www.freepik.com), Creative Commons BY 3.0.

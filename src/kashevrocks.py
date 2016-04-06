@@ -4,23 +4,28 @@
 # Kashev Dalmia - kashev.dalmia@gmail.com
 
 import flask
-from flask.ext.assets import Environment, Bundle
+
+from .assets import register_assets
+# Import the links which go on the home page
+from .home_page_links import LINKS
 
 app = flask.Flask(__name__)
 
-assets = Environment(app)
 
-# Register Assets
-main_css = Bundle('css/main.scss',
-                  filters='scss,cssmin',
-                  output='generated/main.css')
-assets.register('main_css', main_css)
+# Configure all the URLS
 
 
 @app.route("/")
 def index():
     """ Return the main page for kashev.rocks. """
-    return flask.render_template('index.html')
+    return flask.render_template('index.html', links=LINKS)
+
+
+@app.route("/resume")
+def resume():
+    """ Send a PDF of my resume. """
+    return flask.send_from_directory(
+        app.static_folder, 'pdf/Kashev_Dalmia_Resume_v2015_08_0sx.pdf')
 
 
 @app.route("/uinstall")
@@ -31,5 +36,8 @@ def uinstall():
     uinstall_url = 'https://github.com/kashev/dotfiles/raw/master/uinstall.sh'
     return flask.redirect(uinstall_url)
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.debug = True
+    register_assets(app)
+    app.run()

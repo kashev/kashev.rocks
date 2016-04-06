@@ -11,16 +11,21 @@
   <!-- STYLE -->
 
   <!-- Pure CSS -->
-  <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.5.0/pure-min.css">
-  <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+  <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
 
   <!-- hint.css -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/hint.css/1.3.2/hint.min.css">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 
   <!-- kashev.rocks -->
   {% assets "main_css" %}
     <link rel="stylesheet" type="text/css" href="{{ASSET_URL}}">
   {% endassets %}
+
   <link rel="icon"
         type="image/ico"
         href="static/img/favicon.ico?version=newest">
@@ -41,47 +46,34 @@
       </div>
       <!-- ICON LINKS -->
       <nav class="pure-g" id="kd-icons-bar">
-        <div class="pure-u-1-6">
-          <a href="http://kashevdalmia.com/">
-            <div class="home-icon hint--bottom" data-hint="My Other Website"></div>
-          </a>
-        </div>
-        <div class="pure-u-1-6">
-          <a href="mailto:kashev.dalmia@gmail.com?Subject=Hello!">
-            <div class="mail-icon hint--bottom" data-hint="Email Me"></div>
-          </a>
-        </div>
-        <div class="pure-u-1-6">
-          <a href="http://github.com/kashev">
-            <div class="github-icon hint--bottom" data-hint="Github"></div>
-          </a>
-        </div>
-        <div class="pure-u-1-6">
-          <a href="http://www.last.fm/user/aerovai">
-            <div class="lastfm-icon hint--bottom" data-hint="Last.fm"></div>
-          </a>
-        </div>
-        <div class="pure-u-1-6">
-          <a href="http://blog.kashevdalmia.com/">
-            <div class="ghost-icon hint--bottom" data-hint="Blog"></div>
-          </a>
-        </div>
-        <div class="pure-u-1-6">
-          <a href="http://blog.kashev.rocks">
-            <div class="tumblr-icon hint--bottom" data-hint="Tumblr"></div>
-          </a>
-        </div>
+        {% for l in links %}
+          <div class="kd-icon-box
+                      pure-u-1-{{links|length // 2}}
+                      pure-u-md-1-{{links|length}}">
+            <a href="{{ l.url }}">
+              <div class="kd-icon {{l.name}}-icon hint--bottom" data-hint="{{ l.hint }}">
+                {{ l.svg|safe }}
+              </div>
+            </a>
+          </div>
+        {% endfor %}
       </nav> <!-- END ICON LINKS -->
     </header> <!-- END OF HEADER -->
 
     <!-- BEGIN CONTENT -->
     <h1>About Me</h1>
-    <p>My name is <strong>Kashev Dalmia</strong>, and I'm an <strong>Engineer</strong>. More coming soon.</p>
+    <p>My name is <strong>Kashev Dalmia</strong>. This website is a place for me to put all my stuff.<p>
   </div> <!-- END OF CONTENT -->
 
   <!-- Script -->
   <!-- jQuery -->
   <!-- <script src="//code.jquery.com/jquery-2.1.0.min.js"></script> -->
 
+  <!-- kashev.rocks -->
+<!--
+  {% assets "main_js" %}
+    <script src="{{ASSET_URL}}"></script>
+  {% endassets %}
+ -->
 </body>
 </html>

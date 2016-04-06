@@ -69,7 +69,6 @@ html body {
 
 header {
   text-align: center;
-
 }
 
 h1 {
@@ -160,83 +159,53 @@ $selection-background : $text;
 /*
  * ICONS
  */
-$icon-size : 54px;
+$icon-size : 60px;
 #kd-icons-bar {
 
   width: 100%;
   padding : 0;
   .kd-icon-box {
-    @include border-radius(50%);
     display: block;
-    width  : $icon-size;
-    height : $icon-size;
     text-align: center;
 
     .kd-icon {
       display: block;
-      margin-left: auto;
-      margin-right: auto;
-      display: inline-block;
-      vertical-align: middle;
-      height: 90%;
-    }
-  }
-
-  /* Specific Icon Classes */
-  $home-name : ".home-icon";
-  $home-color : #30A848; // bite labs
-  $home-image : "home.png";
-
-  $mail-name : ".mail-icon";
-  $mail-color : #DD4B39; // gmail
-  $mail-image : "mail.png";
-
-  $github-name : ".github-icon";
-  $github-color : #555555;
-  $github-image : "github.png";
-
-  $ghost-name : ".ghost-icon";
-  $ghost-color : #212425; // ghost blog
-  $ghost-image : "ghost.png";
-
-  $lastfm-name : ".lastfm-icon";
-  $lastfm-color : #D51007;
-  $lastfm-image : "lastfm.png";
-
-  $tumblr-name : ".tumblr-icon";
-  $tumblr-color : #2C4762;
-  $tumblr-image : "tumblr.png";
-
-  @mixin kd-icon-maker($name, $color, $image) {
-    #{$name} {
-      display: block;
-      margin: 0 auto;
+      margin: $icon-size * 0.1 auto;
       width: $icon-size;
       height: $icon-size;
       @include border-radius(50%);
 
-      background: $color;
-      background-image: url(../img/#{$image});
-      background-size: $icon-size*.9 $icon-size*.9;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
+      $icon-multiplier : 0.6;
+      svg {
+        fill : white;
+        width: $icon-size * $icon-multiplier;
+        height: $icon-size * $icon-multiplier;
+        padding: $icon-size * (1 - $icon-multiplier) / 2;
+      }
     }
 
-    #{$name}:hover {
-      background: lighten($color, 10%);
-      background-image: url(../img/#{$image});
-      background-size: $icon-size*.9 $icon-size*.9;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
+    /**
+     * A mixin to make a CSS rule for an icon of a specific color.
+     * @param  {string} $name  The name of the icon, for making the rule.
+     * @param  {color} $color  The color the new icon will be.
+     */
+    @mixin kd-icon-maker($name, $color) {
+      .#{$name}-icon {
+        background: $color;
+      }
+
+      .#{$name}-icon:hover {
+        background: lighten($color, 10%);
+      }
     }
+
+    /*
+     * Make a target css entry for every home page link.
+     */
+    {% for l in links %}
+    @include kd-icon-maker({{ l.name }}, {{ l.color }});
+    {% endfor %}
   }
-
-  @include kd-icon-maker($home-name, $home-color, $home-image);
-  @include kd-icon-maker($mail-name, $mail-color, $mail-image);
-  @include kd-icon-maker($github-name, $github-color, $github-image);
-  @include kd-icon-maker($ghost-name, $ghost-color, $ghost-image);
-  @include kd-icon-maker($lastfm-name, $lastfm-color, $lastfm-image);
-  @include kd-icon-maker($tumblr-name, $tumblr-color, $tumblr-image);
 }
 
 /*
@@ -245,9 +214,11 @@ $icon-size : 54px;
 .hint:after, [data-hint]:after {
   font-size: $p-size * 0.9;
 }
+
 .hint--bottom:after {
   margin-left: -1 * 0.5 * $icon-size;
 }
+
 .hint--bottom:before {
   margin-left: -5px;
 }
