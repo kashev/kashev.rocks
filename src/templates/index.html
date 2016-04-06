@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>kashev.rocks</title>
+  <title>kashevdalmia.com</title>
   <!-- STYLE -->
 
   <!-- Pure CSS -->
@@ -38,8 +38,8 @@
   <div id="content">
     <!-- HEADER -->
     <header>
-      <h1>kashev rocks</h1>
-      <h2>pronounced <strong>&ldquo;k-shove rawks&rdquo;</strong></h2>
+      <h1>Kashev Dalmia</h1>
+      <h2>pronounced <strong>&ldquo;k-shove&rdquo;</strong></h2>
       <!-- HEADSHOT -->
       <div class="headshot-container center">
         <img src="static/img/kashev.png" alt="Kashev Dalmia" class="circle contained">
@@ -48,8 +48,7 @@
       <nav class="pure-g" id="kd-icons-bar">
         {% for l in links %}
           <div class="kd-icon-box
-                      pure-u-1-{{links|length // 2}}
-                      pure-u-md-1-{{links|length}}">
+                      pure-u-1-{{links|length}}">
             <a href="{{ l.url }}">
               <div class="kd-icon {{l.name}}-icon hint--bottom" data-hint="{{ l.hint }}">
                 {% include l.svg %}
@@ -64,15 +63,5 @@
     {% filter markdown %}{% include 'markdown/index.md' %}{% endfilter %}
   </div> <!-- END OF CONTENT -->
 
-  <!-- Script -->
-  <!-- jQuery -->
-  <!-- <script src="//code.jquery.com/jquery-2.1.0.min.js"></script> -->
-
-  <!-- kashev.rocks -->
-<!--
-  {% assets "main_js" %}
-    <script src="{{ASSET_URL}}"></script>
-  {% endassets %}
- -->
 </body>
 </html>
