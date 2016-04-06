@@ -38,7 +38,7 @@ $page-margin : 3%;
 $h1-size : 3.5rem;
 $h2-size : 3.0rem;
 $p-size : 2.1rem;
-$padding-factor : 0.0;
+$padding-factor : 0.5;
 $margin-factor  : 0.0;
 
 $page-width : 60.0rem;
@@ -68,27 +68,26 @@ html body {
 }
 
 header {
-  text-align: center;
-}
-
-h1 {
-  font-size: $h1-size;
-  font-weight: bold;
-}
-
-header {
   padding-bottom: $p-size;
   white-space: nowrap;
+  text-align: center;
+
   h1 {
     font-size: 14vw;
-    padding : $padding-factor * $h1-size;
-    margin  : $margin-factor  * $h1-size;
+    padding : 0.5vw;
     font-weight : 300;
   }
 
   h2 {
     font-size: 6vw;
   }
+}
+
+h1 {
+  font-size: $h1-size;
+  font-weight: bold;
+  padding: 0.01 * $h1-size 0;
+  margin: 0.01 * $h1-size 0;
 }
 
 h2 {
@@ -102,9 +101,8 @@ p {
   font-family: $lato-stack;
   font-size: $p-size;
   text-align: justify;
-  line-height: $p-size * (($padding-factor * 3) + 1);
 
-  padding : $padding-factor * $p-size;
+  padding : $padding-factor * $p-size 0;
   margin  : $margin-factor  * $p-size;
 }
 
