@@ -33,7 +33,8 @@ def clean():
     """ Cleans up all generated and cache files from the project. """
     import shutil
     paths_to_clean = ['src/static/.webassets-cache',
-                      'src/static/generated']
+                      'src/static/generated',
+                      'debug.log']
     for path in paths_to_clean:
         try:
             shutil.rmtree(path)
