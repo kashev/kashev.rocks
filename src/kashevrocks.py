@@ -14,7 +14,7 @@ from .home_page_links import LINKS
 app = flask.Flask(__name__)
 
 # Set up logging.
-logging.basicConfig(filename='debug.log', level=logging.DEBUG)
+logging.basicConfig(filename='/home/flask/kdebug.log', level=logging.DEBUG)
 
 
 # Configure all the URLS

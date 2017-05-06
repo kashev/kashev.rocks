@@ -10,7 +10,7 @@ with open(activate_this) as f:
     code = compile(f.read(), activate_this, 'exec')
     exec(code)
 
-sys.path.insert(0, '/srv/kashev.rocks/')
+sys.path.insert(0, '/srv/kashevdalmia.com/')
 
 # Import the WSGI application. mod_wsgi expects it to be called `application`.
 from src.kashevrocks import app as application
