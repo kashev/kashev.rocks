@@ -1,5 +1,5 @@
 # About Me
 
-My name is **Kashev Dalmia**, and I'm an engineer. I'm currently finishing my masters at the University of Illinois at Urbana Champaign. After that, I'll start working at SpaceX.
+My name is **Kashev Dalmia**, and I'm an engineer. I work at [SpaceX](http://www.spacex.com/) where I write flight software.
 
-More coming soon!
+I went to the [University of Illinois](http://illinois.edu/) for 6 years, where I studied [Electrical and Computer Engineering](http://www.ece.illinois.edu/).
